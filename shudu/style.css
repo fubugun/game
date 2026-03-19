@@ -1,0 +1,108 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: "Microsoft YaHei", sans-serif;
+  background: radial-gradient(circle at top, #1c2a4d, #11182f 60%);
+  color: #ebf1ff;
+}
+
+.app {
+  width: min(760px, 94vw);
+  margin: 20px auto;
+}
+
+h1 {
+  text-align: center;
+}
+
+.panel {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  padding: 12px;
+  margin-bottom: 12px;
+}
+
+.controls {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+button {
+  padding: 8px 14px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 700;
+  cursor: pointer;
+  background: #82a8ff;
+  color: #0f1a36;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  gap: 0;
+  width: min(560px, 88vw);
+  margin: 0 auto;
+  border: 3px solid #dfe8ff;
+}
+
+.cell {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border: 1px solid rgba(226, 234, 255, 0.6);
+  background: rgba(255, 255, 255, 0.12);
+  color: #f8fbff;
+  text-align: center;
+  font-size: clamp(16px, 2.4vw, 24px);
+  font-weight: 700;
+  outline: none;
+}
+
+.cell:focus {
+  box-shadow: inset 0 0 0 2px #ffd36b;
+}
+
+.cell.given {
+  background: rgba(167, 191, 247, 0.3);
+  color: #dff2ff;
+}
+
+.cell.error {
+  background: rgba(255, 80, 80, 0.4);
+}
+
+.thick-right {
+  border-right: 3px solid #dfe8ff;
+}
+
+.thick-bottom {
+  border-bottom: 3px solid #dfe8ff;
+}
+
+.status {
+  text-align: center;
+  font-weight: 700;
+}
+
+.confetti {
+  position: fixed;
+  top: -18px;
+  width: 10px;
+  height: 14px;
+  pointer-events: none;
+  animation: drop linear forwards;
+}
+
+@keyframes drop {
+  to {
+    transform: translateY(110vh) rotate(540deg);
+    opacity: 0.2;
+  }
+}

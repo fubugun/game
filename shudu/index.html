@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>数独游戏</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <main class="app">
+    <h1>随机数独</h1>
+    <section class="panel controls">
+      <button id="newPuzzleBtn">刷新下一题</button>
+      <span>完成后会自动撒花并生成新题。</span>
+    </section>
+    <section class="panel">
+      <div id="board" class="board" aria-label="数独棋盘"></div>
+    </section>
+    <section id="status" class="panel status">正在生成题目...</section>
+  </main>
+  <script src="./script.js"></script>
+</body>
+</html>

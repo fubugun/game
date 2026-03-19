@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>迷宫关卡挑战</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <main class="app">
+    <h1>迷宫关卡挑战</h1>
+
+    <section id="menu" class="panel">
+      <p>先选择难度，再挑战 5 个关卡。</p>
+      <div class="difficulty-buttons">
+        <button data-difficulty="easy">简单</button>
+        <button data-difficulty="medium">普通</button>
+        <button data-difficulty="hard">困难</button>
+      </div>
+    </section>
+
+    <section id="hud" class="panel hidden">
+      <div>难度：<span id="difficultyLabel">-</span></div>
+      <div>关卡：<span id="levelLabel">1</span>/5</div>
+      <div>步数：<span id="stepLabel">0</span></div>
+      <div>用时：<span id="timeLabel">0</span>s</div>
+      <button id="backBtn" class="ghost-btn">返回选择难度</button>
+    </section>
+
+    <section class="panel game-panel hidden" id="gameWrap">
+      <canvas id="mazeCanvas" width="620" height="620"></canvas>
+      <p class="tip">操作：方向键 / WASD。绿色方块到达金色终点即可过关。</p>
+    </section>
+
+    <section id="message" class="panel hidden"></section>
+  </main>
+
+  <script src="./script.js"></script>
+</body>
+</html>

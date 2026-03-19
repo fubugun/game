@@ -1,0 +1,117 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: "Microsoft YaHei", sans-serif;
+  background: linear-gradient(135deg, #171a2b, #23324a);
+  color: #eef3ff;
+}
+
+.app {
+  width: min(920px, 94vw);
+  margin: 24px auto;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 18px;
+}
+
+.panel {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 14px;
+  padding: 14px 16px;
+  margin-bottom: 14px;
+  backdrop-filter: blur(4px);
+}
+
+.hidden {
+  display: none;
+}
+
+.difficulty-buttons {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+button {
+  border: none;
+  border-radius: 10px;
+  padding: 10px 16px;
+  cursor: pointer;
+  background: #89a9ff;
+  color: #101426;
+  font-weight: 700;
+}
+
+button:hover {
+  filter: brightness(1.07);
+}
+
+.ghost-btn {
+  background: transparent;
+  color: #d4deff;
+  border: 1px solid rgba(212, 222, 255, 0.5);
+}
+
+#hud {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 10px;
+  align-items: center;
+}
+
+#hud > div {
+  background: rgba(0, 0, 0, 0.18);
+  border-radius: 8px;
+  padding: 8px 10px;
+}
+
+.game-panel {
+  text-align: center;
+}
+
+#mazeCanvas {
+  max-width: 100%;
+  width: min(620px, 88vw);
+  aspect-ratio: 1 / 1;
+  border-radius: 10px;
+  background: #111528;
+}
+
+.tip {
+  margin-top: 10px;
+  color: #c9d6ff;
+}
+
+#message {
+  text-align: center;
+  font-size: 1.1rem;
+}
+
+.confetti-piece {
+  position: fixed;
+  width: 10px;
+  height: 14px;
+  pointer-events: none;
+  top: -20px;
+  animation: fall linear forwards;
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(110vh) rotate(720deg);
+    opacity: 0.2;
+  }
+}
+
+@media (max-width: 760px) {
+  #hud {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}

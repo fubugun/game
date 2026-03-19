@@ -1,0 +1,51 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  font-family: "Microsoft YaHei", sans-serif;
+  background: #040915;
+}
+
+#sky {
+  width: 100vw;
+  height: 100vh;
+  display: block;
+  cursor: crosshair;
+}
+
+.hud {
+  position: fixed;
+  left: 12px;
+  top: 12px;
+  color: #dce7ff;
+  background: rgba(8, 18, 38, 0.56);
+  border: 1px solid rgba(220, 231, 255, 0.3);
+  border-radius: 10px;
+  padding: 10px 12px;
+}
+
+.hud h1 {
+  font-size: 20px;
+  margin: 0 0 6px;
+}
+
+.hud p {
+  margin: 0 0 8px;
+  font-size: 14px;
+}
+
+button {
+  border: none;
+  border-radius: 8px;
+  padding: 7px 12px;
+  font-weight: 700;
+  cursor: pointer;
+  background: #9ab8ff;
+  color: #0d1a3f;
+}

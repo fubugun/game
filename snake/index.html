@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>贪吃蛇</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <main class="app">
+    <h1>经典贪吃蛇</h1>
+    <section class="panel hud">
+      <div>分数：<span id="score">0</span></div>
+      <div>最高分：<span id="best">0</span></div>
+      <button id="startBtn">开始 / 重新开始</button>
+    </section>
+
+    <section class="panel game-wrap">
+      <canvas id="game" width="560" height="560"></canvas>
+      <p class="tip">操作：方向键 / WASD。撞墙或撞到自己则游戏结束。</p>
+      <div class="mobile-pad">
+        <button data-dir="up">上</button>
+        <div>
+          <button data-dir="left">左</button>
+          <button data-dir="down">下</button>
+          <button data-dir="right">右</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="status" class="panel status">点击“开始”开始游戏。</section>
+  </main>
+  <script src="./script.js"></script>
+</body>
+</html>
