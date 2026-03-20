@@ -31,7 +31,7 @@ projectsfusi/
    ├─ index.html
    ├─ style.css
    └─ script.js
-
+```
 ## 🚀 Run
 任选一个子目录，直接打开 index.html 即可。
 
